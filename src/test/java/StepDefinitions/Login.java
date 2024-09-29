@@ -21,10 +21,10 @@ public class Login {
     public void enterTheDataDatas(DataTable dataTable) {
         List<List<String>> strElementsList = dataTable.asLists(String.class);
         for (int i = 0; i < strElementsList.size(); i++) {
-            WebElement e=lp.getWebElement(strElementsList.get(i).get(0));
+            WebElement e = lp.getWebElement(strElementsList.get(i).get(0));
             String strData = strElementsList.get(i).get(1);
 
-            lp.mySendKeys(e,strData);
+            lp.mySendKeys(e, strData);
         }
     }
 
@@ -32,12 +32,10 @@ public class Login {
     @When("Click on the element/elements$")
     public void clickOnTheElementElements(DataTable dataTable) {
         List<String> strElementsList = dataTable.asList(String.class);
-        for (String strE : strElementsList){
+        for (String strE : strElementsList) {
             lp.myClick(lp.getWebElement(strE));
         }
     }
-
-
 
 
 }

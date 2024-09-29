@@ -16,7 +16,7 @@ public class GWD {
         Locale.setDefault(new Locale("EN"));
         System.setProperty("user.language", "EN");
         Logger.getLogger("org.openqa.selenium").setLevel(Level.SEVERE);
-        if (driver==null) {
+        if (driver == null) {
             driver = new ChromeDriver();
             driver.manage().window().maximize();
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
@@ -31,9 +31,9 @@ public class GWD {
             throw new RuntimeException(e);
         }
 
-        if (driver!=null) {
+        if (driver != null) {
             driver.quit();
-            driver=null;
+            driver = null;
         }
     }
 
