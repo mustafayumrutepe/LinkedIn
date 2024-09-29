@@ -1,0 +1,225 @@
+
+//        List<WebElement> status = driver.findElements(By.xpath("(//ul[@role='list'])[1]//li/div/div/div/div[3]"));
+//        int statuSize=status.size();
+//
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        //js.executeScript("window.scrollBy(0, 2000);");
+//        //WebElement numberOfPagesElement = driver.findElement(By.xpath("//ul[@class='artdeco-pagination__pages artdeco-pagination__pages--number']//li[last()]"));
+//        //String numberOfPagesStr=numberOfPagesElement.getText().toString().replaceAll("[^0-9]", "");
+//        //int numberOfPages = Integer.parseInt(numberOfPagesStr);
+//        //WebElement next = driver.findElement(By.xpath("//*[text()='Next']"));
+//
+//        myWait(1000);
+//        //for (int j = 0; j < numberOfPages; j++) {
+//        for (int i = 0; i < statuSize; i++) {
+//
+//            if (status.get(i).getText().toLowerCase().contains("connect")) {
+//
+//                new Actions(driver).scrollToElement(status.get(i)).build().perform();
+//                status.get(i).click();
+//                myWait(1000);
+//                WebElement barInfo = driver.findElement(By.xpath("(//div[@class='top-card-background-hero-image']/following-sibling::div[1])/div[3]"));
+//                myWait(1000);
+//                if (barInfo.getText().toLowerCase().contains("connect")) {
+//                    myWait(1000);
+//                    WebElement connect1 = driver.findElement(By.xpath("(//div[@class='top-card-background-hero-image']/following-sibling::div[1])/div[3]/div/button"));
+//                    myWait(1000);
+//                    connect1.click();
+///*
+//                    WebElement addANote = driver.findElement(By.xpath("//button[@aria-label='Add a note']"));
+//                    myWait(1000);
+//                    addANote.click();
+//                    WebElement textArea = driver.findElement(By.xpath("//textarea[@name='message']"));
+//                    myWait(1000);
+//                    textArea.sendKeys("Hi,\n" +
+//                            "\n" +
+//                            "I'd like to connect to support each other in our shared interests and professional fields, and to build a strong network. I would appreciate your acceptance of my request.\n" +
+//                            "\n" +
+//                            "Best regards,\n" +
+//                            "\n" +
+//                            "Mustafa");
+//                    WebElement send = driver.findElement(By.xpath("//*[text()='Send']"));
+//                    myWait(1000);
+//                    send.click();
+//
+// */
+//
+//                    WebElement sendWithoutANote = driver.findElement(By.xpath("//button[@aria-label='Send without a note']"));
+//                    myWait(1000);
+//                    sendWithoutANote.click();
+//
+//                } else {
+//                    System.out.println("buraya more butonuna tıklayarak devam etme kodları gelecek");
+//                }
+//                myWait(1000);
+//                driver.navigate().back();
+//                myWait(1000);
+//                status = driver.findElements(By.xpath("(//ul[@role='list'])[1]//li/div/div/div/div[3]"));
+//                statuSize = status.size();
+//            } else continue;
+//        }
+//        myWait(1000);
+//        //new Actions(driver).scrollToElement(next).build().perform();
+//        //next.click();
+//        myWait(1000);
+//
+//        status = driver.findElements(By.xpath("(//ul[@role='list'])[1]//li/div/div/div/div[3]"));
+//        statuSize = status.size();
+//        //js.executeScript("window.scrollBy(0, 2000);");
+//        //numberOfPagesElement = driver.findElement(By.xpath("//ul[@class='artdeco-pagination__pages artdeco-pagination__pages--number']//li[last()]"));
+//        //numberOfPagesStr=numberOfPagesElement.getText().toString().replaceAll("[^0-9]", "");
+//        //numberOfPages = Integer.parseInt(numberOfPagesStr);
+//        //next = driver.findElement(By.xpath("//*[text()='Next']"));
+//        //}
+//    }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+************************KODLARIN TAMAMI AŞAĞIDA*********************************
+
+
+
+//import org.openqa.selenium.*;
+//        import org.openqa.selenium.chrome.ChromeDriver;
+//        import org.openqa.selenium.interactions.Actions;
+//        import org.openqa.selenium.support.ui.WebDriverWait;
+//        import java.time.Duration;
+//        import java.util.List;
+//        import java.util.logging.Level;
+//        import java.util.logging.Logger;
+//
+//public class connect {
+//    public static WebDriver driver;
+//    public static WebDriverWait wait;
+//
+//    public static void main(String[] args) {
+//        Logger logger=Logger.getLogger("");
+//        logger.setLevel(Level.SEVERE);
+//        driver=new ChromeDriver();
+//        driver.manage().window().maximize();
+//        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+//        wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+//        driver.get("https://www.linkedin.com/login/tr?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin");
+//
+//        WebElement email= driver.findElement(By.id("username"));
+//        email.sendKeys("yumrutepemustafa44@gmail.com");
+//        WebElement password= driver.findElement(By.id("password"));
+//        password.sendKeys("Mstf51..");
+//        WebElement loginButton= driver.findElement(By.cssSelector("[type='submit']"));
+//        loginButton.click();
+//        WebElement searchBox= driver.findElement(By.cssSelector("[placeholder='Search']"));
+//        searchBox.sendKeys("qa",Keys.ENTER);    //software development engineering in test
+//        WebElement people= driver.findElement(By.xpath("(//div[@id='search-reusables__filters-bar'])/ul/li/button[text()='People']"));
+//        people.click();
+//        List<WebElement> status = driver.findElements(By.xpath("(//ul[@role='list'])[1]//li/div/div/div/div[3]"));
+//        int statuSize=status.size();
+//
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        //js.executeScript("window.scrollBy(0, 2000);");
+//        //WebElement numberOfPagesElement = driver.findElement(By.xpath("//ul[@class='artdeco-pagination__pages artdeco-pagination__pages--number']//li[last()]"));
+//        //String numberOfPagesStr=numberOfPagesElement.getText().toString().replaceAll("[^0-9]", "");
+//        //int numberOfPages = Integer.parseInt(numberOfPagesStr);
+//        //WebElement next = driver.findElement(By.xpath("//*[text()='Next']"));
+//
+//        myWait(1000);
+//        //for (int j = 0; j < numberOfPages; j++) {
+//        for (int i = 0; i < statuSize; i++) {
+//
+//            if (status.get(i).getText().toLowerCase().contains("connect")) {
+//
+//                new Actions(driver).scrollToElement(status.get(i)).build().perform();
+//                status.get(i).click();
+//                myWait(1000);
+//                WebElement barInfo = driver.findElement(By.xpath("(//div[@class='top-card-background-hero-image']/following-sibling::div[1])/div[3]"));
+//                myWait(1000);
+//                if (barInfo.getText().toLowerCase().contains("connect")) {
+//                    myWait(1000);
+//                    WebElement connect1 = driver.findElement(By.xpath("(//div[@class='top-card-background-hero-image']/following-sibling::div[1])/div[3]/div/button"));
+//                    myWait(1000);
+//                    connect1.click();
+///*
+//                    WebElement addANote = driver.findElement(By.xpath("//button[@aria-label='Add a note']"));
+//                    myWait(1000);
+//                    addANote.click();
+//                    WebElement textArea = driver.findElement(By.xpath("//textarea[@name='message']"));
+//                    myWait(1000);
+//                    textArea.sendKeys("Hi,\n" +
+//                            "\n" +
+//                            "I'd like to connect to support each other in our shared interests and professional fields, and to build a strong network. I would appreciate your acceptance of my request.\n" +
+//                            "\n" +
+//                            "Best regards,\n" +
+//                            "\n" +
+//                            "Mustafa");
+//                    WebElement send = driver.findElement(By.xpath("//*[text()='Send']"));
+//                    myWait(1000);
+//                    send.click();
+//
+// */
+//
+//                    WebElement sendWithoutANote = driver.findElement(By.xpath("//button[@aria-label='Send without a note']"));
+//                    myWait(1000);
+//                    sendWithoutANote.click();
+//
+//                } else {
+//                    System.out.println("buraya more butonuna tıklayarak devam etme kodları gelecek");
+//                }
+//                myWait(1000);
+//                driver.navigate().back();
+//                myWait(1000);
+//                status = driver.findElements(By.xpath("(//ul[@role='list'])[1]//li/div/div/div/div[3]"));
+//                statuSize = status.size();
+//            } else continue;
+//        }
+//        myWait(1000);
+//        //new Actions(driver).scrollToElement(next).build().perform();
+//        //next.click();
+//        myWait(1000);
+//
+//        status = driver.findElements(By.xpath("(//ul[@role='list'])[1]//li/div/div/div/div[3]"));
+//        statuSize = status.size();
+//        //js.executeScript("window.scrollBy(0, 2000);");
+//        //numberOfPagesElement = driver.findElement(By.xpath("//ul[@class='artdeco-pagination__pages artdeco-pagination__pages--number']//li[last()]"));
+//        //numberOfPagesStr=numberOfPagesElement.getText().toString().replaceAll("[^0-9]", "");
+//        //numberOfPages = Integer.parseInt(numberOfPagesStr);
+//        //next = driver.findElement(By.xpath("//*[text()='Next']"));
+//        //}
+//
+//
+//        myWait(10000);
+//        driver.quit();
+//    }
+//
+//
+//
+//
+//
+//
+//    public static void myWait(int sec){
+//        try {
+//            Thread.sleep(sec);
+//        }catch (InterruptedException e){
+//            throw new RuntimeException(e);
+//        }
+//
+//
+//    }
+//}
